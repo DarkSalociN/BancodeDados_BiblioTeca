@@ -11,9 +11,9 @@ void limparTela() {
 }
 
 // Estrutura do nó da árvore binária de busca
-typedef struct Nodo {
+typedef struct Nodo{
     int valor;                    // Valor armazenado no nó
-    struct Nodo *direita, *esquerda; // Ponteiros para os filhos direito e esquerdo
+    struct Nodo *direita, *esquerda; // Ponteiros para os filhos da direita e esquerda
 } NodoArvore;
 
 // Função para inserir um novo nó na árvore binária de busca
@@ -26,7 +26,7 @@ NodoArvore* inserirNodo(NodoArvore *raiz, int numeroInserir) {
         novoNodo->direita = NULL;
         return novoNodo;
     } else {
-        // Insere recursivamente na subárvore esquerda ou direita, dependendo do valor
+        // Insere recursivamente na sub-árvore esquerda ou direita, dependendo do valor
         if (numeroInserir < raiz->valor)
             raiz->esquerda = inserirNodo(raiz->esquerda, numeroInserir);
         else
@@ -116,7 +116,10 @@ int main() {
 
     do {
         // Menu de interface para o usuário
-        cout << "\n\t0 - Sair\n\t1 - Inserir\n\t2 - Imprimir\n\t3 - Buscar\n\t4 - Remover" << endl;
+        cout << "           LóguiTéchi" << endl;
+        cout << "Sistema de armazenamento de Arquivos\n" << endl;
+        cout << "Escolha uma opção abaixo." << endl; 
+        cout << "\t1 - Inserir\n\t2 - Imprimir\n\t3 - Buscar\n\t4 - Remover\n\t0 - Sair" << endl;
         cin >> opcao;
 
         switch (opcao) {
@@ -128,10 +131,10 @@ int main() {
             break;
         case 2:
             // Impressão dos valores da árvore
-            cout << "Valores Inseridos (Pré-Ordem):" << endl;
+            cout << "Valores Inseridos:" << endl; //(Pré-Ordem)
             imprimirPreOrdem(raiz);
             cout << "\n";
-            cout << "Árvore Ordenada (Em-Ordem):" << endl;
+            cout << "Árvore Ordenada:" << endl; //(Em-Ordem)
             imprimirEmOrdem(raiz);
             cout << "\n";
             break;
