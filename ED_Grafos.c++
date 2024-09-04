@@ -119,7 +119,11 @@ int main() {
         cout << "           LóguiTéchi" << endl;
         cout << "Sistema de armazenamento de Arquivos\n" << endl;
         cout << "Escolha uma opção abaixo." << endl; 
-        cout << "\t1 - Inserir\n\t2 - Imprimir\n\t3 - Buscar\n\t4 - Remover\n\t0 - Sair" << endl;
+        cout << "\t1 - Inserir o ID do Produto" << endl;
+        cout << "\t2 - Imprimir pelo ID do produto" << endl;
+        cout << "\t3 - Buscar pelo ID do Produto" << endl;
+        cout << "\t4 - Remover pelo ID do Produto" << endl;
+        cout << "\t0 - Sair" << endl;
         cin >> opcao;
 
         switch (opcao) {
